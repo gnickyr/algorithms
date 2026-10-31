@@ -1,0 +1,24 @@
+# Python generated files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Temporary files created by editors and runners
+tempCodeRunnerFile.*
+.vscode/
+
+# Java build output
+*.class
+out/
+target/
+
+# C and C++ build output
+*.exe
+*.o
+*.obj
+*.out
+build/
+
+# Operating-system metadata
+.DS_Store
+Thumbs.db
