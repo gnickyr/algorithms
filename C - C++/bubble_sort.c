@@ -10,7 +10,7 @@ void swap(int* current, int* next) {
 }
 
 /* Repeatedly move the largest unsorted value to the end of the array. */
-void bubbleSort(int arr[]) {
+void bubble_sort(int arr[]) {
     int i, j;
     int n = sizeof(arr) / sizeof(arr[0]);
     bool swapped;
