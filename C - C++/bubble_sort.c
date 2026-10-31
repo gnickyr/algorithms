@@ -1,5 +1,6 @@
 #include <stdbool.h>
 #include <stdio.h>
+#include "bubble_sort.h"
 
 /* Exchange the values at two positions in the array. */
 void swap(int* current, int* next) {

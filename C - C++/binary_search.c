@@ -1,3 +1,4 @@
+#include "binary_search.h"
 
 /* Recursively search for x in the sorted range of the array. */
 int binary_search(int arr[], int low, int high, int x) {

@@ -1,3 +1,5 @@
+#include "quick_sort.h"
+
 /* Exchange the values at two positions in the array. */
 void swap(int *a, int *b) {
     int temp = *a;
