@@ -1,22 +1,21 @@
 
+/* Recursively search for x in the sorted range of the array. */
 int binary_search(int arr[], int low, int high, int x) {
     if (high >= low) {
         int mid = low + (high - low) / 2;
 
-        /* If the element is at the middle */
+        /* Return the index when the middle element is the target. */
         if (arr[mid] == x)
             return mid;
 
-        /* If the element is smalled than mid,
-        it can only be present left of mid */
+        /* A smaller target can only occur in the left half. */
         if (arr[mid] > x)
             return binary_search(arr, low, mid - 1, x);
 
-        /* Else it can only be present right of mid */
+        /* Otherwise, search the right half. */
         return binary_search(arr, mid + 1, high, x);
     }
 
-    /* If none is satisfied, then the element
-    does not exist in the array */
+    /* An empty search range means the target is not present. */
     return -1;
 }

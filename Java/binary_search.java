@@ -1,29 +1,29 @@
 class BinarySearch {
+    // Recursively search for x in the sorted range of the array.
     static int binary_search(int arr[], int low, int high, int x) {
 
-        /* Check base case */
+        /* Continue while the search range contains an element. */
         if (high >= low) {
 
             int mid = low + (high - low) / 2;
 
-            /* If the element is exactly at middle */
+            /* Return the index when the middle element is the target. */
             if (arr[mid] == x) {
                 return mid;
             }
 
-            /* If it is smaller than mid, 
-            search left of mid */
+            /* A smaller target can only occur in the left half. */
             else if (arr[mid] > x) {
                 return binary_search(arr, low, mid - 1, x);
             }
 
-            /* Else, search right of mid */
+            /* Otherwise, search the right half. */
             else {
                 return binary_search(arr, mid + 1, high, x);
             }
         }
 
-        /* The element is not present in the array */
+        /* An empty search range means the target is not present. */
         else {
             return -1;
         }
